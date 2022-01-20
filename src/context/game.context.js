@@ -40,10 +40,10 @@ function GameProvider(props) {
         setResult(res.results);
 
         if (scoreboard.length < 10) {
-          setScoreboard([ ...scoreboard, res.result ]);
+          setScoreboard([ ...scoreboard, res.results ]);
         } else {
           const [, ...board] = scoreboard;
-          setScoreboard([ ...board, res.result ]);
+          setScoreboard([ ...board, res.results ]);
         }
       })
       .catch((err) => {
